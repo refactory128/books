@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Books</title>
-    <link rel=stylesheet src="styles.css">
+    <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
 </head>
 <body>
@@ -19,6 +19,28 @@
         </tr>
 
     </table>
-    
+    <button class="addBook" onclick="openForm()"> Add Book </button>
+
+    <div id="formAddBook" style="display:none" >
+
+            <h1>Add Book</h1>
+        
+            <label for="Title"><b>Title</b></label>
+            <input type="text" placeholder="Enter Title" name="title" required>
+      
+            </br>
+            <label for="Author"><b>Author</b></label>
+            <input type="text" placeholder="Enter Author" name="author" required>
+            </br>
+            <label for="Pages"><b>Pages</b></label>
+            <input type="text" placeholder="Enter Pages" name="pages" required>
+            </br>
+            <label for="Read"><b>Read</b></label>
+            <input type="text" placeholder="Enter Read" name="read" required>
+      
+          <button type="submit" class="btn" onclick="addBook()">Enter</button>
+          <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
+
+      </div>
 </body>
 </html>
