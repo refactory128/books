@@ -2,24 +2,26 @@ console.log("books");
 
 let myLibrary = [];
 
-function book(title="none", author="none", pages=0, read=false,id=null){
+class book{
+    constructor(title="none", author="none", pages=0, read=false,id=null){
 
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
-    this.id = id;
-
-}
-
-book.prototype.addToLibrary = function() { 
-    if (myLibrary.length === 0){
-        this.id = 0;
-
-    } else {
-        this.id = myLibrary[myLibrary.length-1].id + 1;
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+        this.id = id;
+    
     }
-    myLibrary.push(this);
+
+    addToLibrary() { 
+        if (myLibrary.length === 0){
+            this.id = 0;
+    
+        } else {
+            this.id = myLibrary[myLibrary.length-1].id + 1;
+        }
+        myLibrary.push(this);
+    }
 }
 
 function removeFromLibrary(id){
